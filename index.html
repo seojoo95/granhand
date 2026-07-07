@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRANHAND</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="./js/gsap.min.js"></script>
+    <script src="./js/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <span class="introBg" aria-hidden="true"></span>
+    <div class="intro">
+      <div class="introContents">
+        <div class="introLogo">
+          <img src="./images/granhand_logo.svg" alt="granhand" />
+        </div>
+        <p class="introText mainText">
+          그랑핸드는 ‘향의 일상화’를 모토로, 일상을 더 아름답게 만들어 줄 향과
+          제품들을 제안합니다.
+        </p>
+        <div class="introText subText">
+          <p>
+            향은 보이지도, 잡히지도 않지만,
+            <span class="bold">우리에게 수많은 기억과 감정을 각인시키고,</span>
+          </p>
+          <p>나아가 우리 삶 속에서 많은 부분을 결정합니다.</p>
+          <p>
+            그랑핸드는 이러한 향의 가치를 믿으며, 이를 매개로 한 끊임없는 시도를
+            통해 <span class="bold">향의 일상화를 꿈꿉니다.</span>
+          </p>
+          <p>
+            그랑핸드는 쉽게 소비되고 잊혀질 무언가가 아닌, 보이지 않는 곳에서
+            뚜렷한 존재감으로
+          </p>
+          <p>
+            <span class="bold"
+              >모든 사람들에게 우리의 마음과 온기를 전하고 싶습니다.</span
+            >
+          </p>
+        </div>
+        <div class="scrollWrap">
+          <img
+            class="scroll"
+            src="./images/icon_scroll_bw.svg"
+            alt="스크롤 동작 아이콘"
+          />
+          <img
+            class="scroll"
+            src="./images/icon_scroll_bw.svg"
+            alt="스크롤 동작 아이콘"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mainWrap">
+      <header class="headerContainer product">
+        <h1 class="logo">
+          <a href="index.html"
+            ><img src="./images/granhand_logo.svg" alt="logo"
+          /></a>
+        </h1>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#section1" class="on">Susie Salmon</a></li>
+            <li><a href="#section2">Marine Orchid</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="sectionWrap1" class="sectionWrap">
+          <div class="imgSectionWrap">
+            <div class="sectionContWrap img">
+              <img class="img1" src="./images/bed.jpg" alt="침실" />
+              <img class="img2" src="./images/fruit_1.jpg" alt="과일" />
+            </div>
+            <div class="sectionContWrap text">
+              <p class="contName">SUSIE SALMON.<span>수지 살몬</span></p>
+              <p>달콤한 과일을 먹은 뒤의 낮잠</p>
+              <p>A middy nap after eating sweet fruits</p>
+            </div>
+          </div>
+          <div class="aniSectionWrap">
+            <div class="aniContainer">
+              <div class="productImgWrap">
+                <img
+                  class="product"
+                  src="../images/bg/susie.png"
+                  alt="수지살몬"
+                />
+                <img
+                  class="bgImg lemon2"
+                  src="../images/bg/lemon2.png"
+                  alt="lemon2"
+                />
+                <img
+                  class="bgImg lemon1"
+                  src="../images/bg/lemon1.png"
+                  alt="lemon1"
+                />
+                <img
+                  class="bgImg blackcurrent"
+                  src="../images/bg/blackcurrent.png"
+                  alt="blackcurrent"
+                />
+                <img
+                  class="bgImg tangerine"
+                  src="../images/bg/tangerine.png"
+                  alt="tangerine"
+                />
+              </div>
+              <div class="productInfoWrap">
+                <div class="productTextWrap top">
+                  <p class="productText">
+                    <span>Leomon,</span>
+                    <span class="on">Leomon,</span>
+                  </p>
+                  <p class="productText">
+                    <span>Black Currant,</span>
+                    <span class="on">Black Currant,</span>
+                  </p>
+                  <p class="productText">
+                    <span>Tangerine,</span>
+                    <span class="on">Tangerine,</span>
+                  </p>
+                  <p class="productText">
+                    <span>Grass,</span>
+                    <span class="on">Grass,</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- aniContainer END -->
+          </div>
+        </div>
+        <!-- sectionWrap1 END -->
+      </main>
+    </div>
+    <script src="./js/animation.js"></script>
+  </body>
+</html>

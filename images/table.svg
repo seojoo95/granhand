@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1914 1603.5">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #494949;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: #e5e5e5;
+      }
+
+      .st3 {
+        fill: #a5a5a5;
+      }
+
+      .st4 {
+        fill: #353535;
+      }
+    </style>
+  </defs>
+  <g>
+    <ellipse class="st4" cx="957.1" cy="1497.5" rx="346.3" ry="106"/>
+    <rect class="st4" x="610.8" y="1473.7" width="692.5" height="23.8"/>
+    <ellipse class="st0" cx="957.1" cy="1475.2" rx="346.3" ry="106"/>
+  </g>
+  <path class="st3" d="M1021.2,1478.4h-140.5c-1.9,0-3.4-1.5-3.4-3.4l48.7-1125.1h66.2l32.5,1125c0,1.9-1.5,3.5-3.5,3.5Z"/>
+  <g>
+    <ellipse class="st2" cx="957" cy="278.9" rx="957" ry="230.4"/>
+    <rect class="st2" x=".1" y="227.2" width="1913.9" height="51.7"/>
+    <ellipse class="st1" cx="957" cy="230.4" rx="957" ry="230.4"/>
+  </g>
+</svg>
