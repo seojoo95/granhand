@@ -908,7 +908,7 @@ body::-webkit-scrollbar {
 }
 
 /* 가로형 */
-@media (orientation: landscape) and (max-width: 1400px) {
+@media (orientation: landscape) {
   .sectionWrap .aniSectionWrap .aniContainer {
     display: none;
   }
