@@ -61,19 +61,36 @@
             ><img src="./images/granhand_logo.svg" alt="logo"
           /></a>
         </h1>
-        <nav class="gnb">
-          <ul>
-            <li><a href="#section1" class="on">Susie Salmon</a></li>
-            <li><a href="#section2">Marine Orchid</a></li>
-          </ul>
-        </nav>
+        <div class="menuWrap">
+          <nav class="gnb">
+            <ul>
+              <li>
+                <button class="mainMenu on" data-id="section1">
+                  Susie Salmon
+                </button>
+              </li>
+              <li>
+                <button class="mainMenu" data-id="section2">
+                  Marine Orchid
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <div class="tabMenuContainer">
+            <ul class="tabMenuWrap">
+              <li class="tabMenu on">top</li>
+              <li class="tabMenu">middle</li>
+              <li class="tabMenu">bottom</li>
+            </ul>
+          </div>
+        </div>
       </header>
       <main>
-        <div id="sectionWrap1" class="sectionWrap">
+        <div id="section1" class="sectionWrap">
           <div class="imgSectionWrap">
             <div class="sectionContWrap img">
-              <img class="img1" src="./images/bed.jpg" alt="침실" />
-              <img class="img2" src="./images/fruit_1.jpg" alt="과일" />
+              <img class="img1" src="./images/bg/bed.jpg" alt="침실" />
+              <img class="img2" src="./images/bg/fruit_1.jpg" alt="과일" />
             </div>
             <div class="sectionContWrap text">
               <p class="contName">SUSIE SALMON.<span>수지 살몬</span></p>
@@ -81,8 +98,9 @@
               <p>A middy nap after eating sweet fruits</p>
             </div>
           </div>
-          <div class="aniSectionWrap">
-            <div class="aniContainer">
+          <div class="aniSectionWrap hide">
+            <!-- tabMenuContainer END -->
+            <div class="aniContainer top show">
               <div class="productImgWrap">
                 <img
                   class="product"
@@ -113,29 +131,286 @@
               <div class="productInfoWrap">
                 <div class="productTextWrap top">
                   <p class="productText">
-                    <span>Leomon,</span>
-                    <span class="on">Leomon,</span>
+                    <span>Lemon</span>
+                    <span class="on">Lemon</span>
                   </p>
                   <p class="productText">
-                    <span>Black Currant,</span>
-                    <span class="on">Black Currant,</span>
+                    <span>Black Currant</span>
+                    <span class="on">Black Currant</span>
                   </p>
                   <p class="productText">
-                    <span>Tangerine,</span>
-                    <span class="on">Tangerine,</span>
+                    <span>Tangerine</span>
+                    <span class="on">Tangerine</span>
                   </p>
                   <p class="productText">
-                    <span>Grass,</span>
-                    <span class="on">Grass,</span>
+                    <span>Grass</span>
+                    <span class="on">Grass</span>
                   </p>
                 </div>
               </div>
             </div>
-            <!-- aniContainer END -->
+            <!-- aniContainer top END -->
+            <div class="aniContainer middle">
+              <div class="productImgWrap">
+                <img
+                  class="product"
+                  src="./images/bg/susie.png"
+                  alt="수지살몬"
+                />
+                <img class="bgImg musk" src="./images/bg/musk.png" alt="musk" />
+                <img
+                  class="bgImg freesia"
+                  src="./images/bg/freesia.png"
+                  alt="freesia"
+                />
+                <img
+                  class="bgImg apple"
+                  src="./images/bg/apple.png"
+                  alt="apple"
+                />
+                <img
+                  class="bgImg peach"
+                  src="./images/bg/peach.png"
+                  alt="peach"
+                />
+                <img class="bgImg lily" src="./images/bg/lily.png" alt="lily" />
+                <img class="bgImg rose" src="./images/bg/rose.png" alt="rose" />
+              </div>
+              <div class="productInfoWrap">
+                <div class="productTextWrap">
+                  <p class="productText">
+                    <span>Lily of the Valley</span>
+                    <span class="on">Lily of the Valley</span>
+                  </p>
+                  <p class="productText">
+                    <span>Jasmine, Rose</span>
+                    <span class="on">Jasmine, Rose</span>
+                  </p>
+                  <p class="productText">
+                    <span>Freesia, Peach</span>
+                    <span class="on">Freesia, Peach</span>
+                  </p>
+                  <p class="productText">
+                    <span>Apricot, Apple</span>
+                    <span class="on">Apricot, Apple</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- aniContainer middle END -->
+            <div class="aniContainer bottom">
+              <div class="productImgWrap">
+                <img
+                  class="product"
+                  src="./images/bg/susie.png"
+                  alt="수지살몬"
+                />
+                <img
+                  class="bgImg sandal"
+                  src="./images/bg/sandal.png"
+                  alt="sandal"
+                />
+                <img
+                  class="bgImg musk"
+                  src="./images/bg/musk2.png"
+                  alt="musk"
+                />
+                <img
+                  class="bgImg cedar1"
+                  src="./images/bg/cedar.png"
+                  alt="cedar"
+                />
+                <img
+                  class="bgImg cedar2"
+                  src="./images/bg/cedar.png"
+                  alt="cedar"
+                />
+                <img class="bgImg cone" src="./images/bg/cone.png" alt="cone" />
+              </div>
+              <div class="productInfoWrap">
+                <div class="productTextWrap">
+                  <p class="productText">
+                    <span>SandalWood</span>
+                    <span class="on">SandalWood</span>
+                  </p>
+                  <p class="productText">
+                    <span>Cedar</span>
+                    <span class="on">Cedar</span>
+                  </p>
+                  <p class="productText">
+                    <span>Amber</span>
+                    <span class="on">Amber</span>
+                  </p>
+                  <p class="productText">
+                    <span>White Musk</span>
+                    <span class="on">White Musk</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- aniContainer bottom END -->
+          </div>
+        </div>
+        <!-- sectionWrap1 END -->
+        <div id="section2" class="sectionWrap">
+          <div class="imgSectionWrap">
+            <div class="sectionContWrap img">
+              <img class="img1" src="./images/bg/surfing.jpg" alt="서핑" />
+              <img class="img2" src="./images/bg/drive.jpg" alt="드라이브" />
+            </div>
+            <div class="sectionContWrap text">
+              <p class="contName">MARINE ORCHID.<span>마린 오키드</span></p>
+              <p>인적이 드문 해안도로에서의 드라이빙</p>
+              <p>Cruising down an empty coastal highway</p>
+            </div>
+          </div>
+          <div class="aniSectionWrap hide">
+            <!-- tabMenuContainer END -->
+            <div class="aniContainer top show">
+              <div class="productImgWrap">
+                <img
+                  class="product"
+                  src="./images/bg/marine.png"
+                  alt="마린오키드"
+                />
+                <img
+                  class="bgImg pearflower"
+                  src="./images/bg/pearflower.png"
+                  alt="pearflower"
+                />
+                <img
+                  class="bgImg lemon3"
+                  src="./images/bg/lemon1.png"
+                  alt="lemon3"
+                />
+                <img class="bgImg pear" src="./images/bg/pear.png" alt="pear" />
+                <img
+                  class="bgImg mandarine"
+                  src="./images/bg/mandarine1.png"
+                  alt="mandarine"
+                />
+              </div>
+              <div class="productInfoWrap">
+                <div class="productTextWrap top">
+                  <p class="productText">
+                    <span>Mandarine</span>
+                    <span class="on">Mandarine</span>
+                  </p>
+                  <p class="productText">
+                    <span>Pear</span>
+                    <span class="on">Pear</span>
+                  </p>
+                  <p class="productText">
+                    <span>Lemon</span>
+                    <span class="on">Lemon</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- aniContainer top END -->
+            <div class="aniContainer middle">
+              <div class="productImgWrap">
+                <img
+                  class="product"
+                  src="./images/bg/marine.png"
+                  alt="마린오키드"
+                />
+                <img
+                  class="bgImg lily1"
+                  src="./images/bg/lily1.png"
+                  alt="lily1"
+                />
+                <img
+                  class="bgImg lily2"
+                  src="./images/bg/lily2.png"
+                  alt="lily2"
+                />
+                <img
+                  class="bgImg orchid"
+                  src="./images/bg/orchid.png"
+                  alt="orchid"
+                />
+                <img
+                  class="bgImg whiterose"
+                  src="./images/bg/whiterose.png"
+                  alt="whiterose"
+                />
+              </div>
+              <div class="productInfoWrap">
+                <div class="productTextWrap">
+                  <p class="productText">
+                    <span>Rose</span>
+                    <span class="on">Rose</span>
+                  </p>
+                  <p class="productText">
+                    <span>Lily of the Valley</span>
+                    <span class="on">Lily of the Valley</span>
+                  </p>
+                  <p class="productText">
+                    <span>Orchid</span>
+                    <span class="on">Orchid</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- aniContainer middle END -->
+            <div class="aniContainer bottom">
+              <div class="productImgWrap">
+                <img
+                  class="product"
+                  src="./images/bg/marine.png"
+                  alt="마린오키드"
+                />
+                <img
+                  class="bgImg patchouli2"
+                  src="./images/bg/patchouli2.png"
+                  alt="patchouli2"
+                />
+                <img
+                  class="bgImg patchouli1"
+                  src="./images/bg/patchouli1.png"
+                  alt="patchouli1"
+                />
+                <img
+                  class="bgImg musk3"
+                  src="./images/bg/musk3.png"
+                  alt="musk"
+                />
+                <img
+                  class="bgImg toffee"
+                  src="./images/bg/toffee.png"
+                  alt="toffee"
+                />
+              </div>
+              <div class="productInfoWrap">
+                <div class="productTextWrap">
+                  <p class="productText">
+                    <span>Musk</span>
+                    <span class="on">Musk</span>
+                  </p>
+                  <p class="productText">
+                    <span>Toffee</span>
+                    <span class="on">Toffee</span>
+                  </p>
+                  <p class="productText">
+                    <span>Patchouli</span>
+                    <span class="on">Patchouli</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- aniContainer bottom END -->
           </div>
         </div>
         <!-- sectionWrap1 END -->
       </main>
+    </div>
+    <!-- modal -->
+    <div class="modalWrap">
+      <div class="modalCont">
+        <img src="./images/modal_icon.png" alt="세로모드 아이콘" />
+        <p>세로 모드 또는 데스크톱 화면에 최적화되어 있습니다.</p>
+      </div>
     </div>
     <script src="./js/animation.js"></script>
   </body>
