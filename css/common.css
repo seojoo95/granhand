@@ -76,9 +76,6 @@ body::-webkit-scrollbar {
 .scroll:last-of-type {
   bottom: 0;
 }
-.mainWrap.show {
-  display: block;
-}
 .headerContainer {
   position: fixed;
   top: 0;
@@ -423,10 +420,11 @@ body::-webkit-scrollbar {
 }
 
 .aniSectionWrap .productInfoWrap {
-  width: fit-content;
+  width: 35%;
   height: 100%;
   position: fixed;
   top: 60px;
+  left: 150px;
 }
 .aniSectionWrap .productTextWrap {
   position: absolute;
@@ -908,8 +906,9 @@ body::-webkit-scrollbar {
 }
 
 /* 가로형 */
-@media (orientation: landscape) {
-  .sectionWrap .aniSectionWrap .aniContainer {
+@media (orientation: landscape) and (max-width: 1599px) {
+  .intro,
+  .mainWrap {
     display: none;
   }
   .modalWrap {

@@ -3,6 +3,7 @@ const tl = gsap.timeline();
 const intro = document.querySelector(".intro");
 const wrap = document.querySelector(".mainWrap");
 const header = document.querySelector(".headerContainer");
+const modal = document.querySelector(".modalWrap");
 
 gsap.set(".mainText, .subText p, .scroll", { opacity: 0 });
 gsap.set(".introLogo", { clipPath: "inset(0 100% 0 0)" });
@@ -121,8 +122,13 @@ menuOn(subMenu);
 
 let productAni = () => {};
 
+let isSectionFinished = false;
+
 function sectionAni(targetSection) {
   if (!targetSection) return;
+
+  // 새로운 섹션 애니메이션이 시작될 때는 완료 상태를 false로 초기화
+  isSectionFinished = false;
 
   const imgSectionWrap = targetSection.querySelector(".imgSectionWrap");
   const aniSectionWrap = targetSection.querySelector(".aniSectionWrap");
@@ -154,6 +160,10 @@ function sectionAni(targetSection) {
           if (aniSectionWrap) aniSectionWrap.classList.remove("hide");
           header.classList.remove("hide");
 
+          // ★ sectionAni 완료 알림
+          isSectionFinished = true;
+
+          // 완료된 시점에 현재 분기점에 맞는 productAni 호출
           productAni(targetSection);
         },
       },
@@ -170,101 +180,101 @@ mm.add(
   },
   (context) => {
     let { isDesktop, isMobile } = context.conditions;
+    let productCtx;
 
     if (isDesktop) {
-      let oldTrigger = null;
-
       productAni = (targetSection) => {
-        if (oldTrigger) {
-          oldTrigger.kill();
-          oldTrigger = null;
-        }
-
+        if (productCtx) productCtx.revert();
         const activeContainer =
           targetSection.querySelector(".aniContainer.show");
         if (!activeContainer) return;
 
-        gsap.set(activeContainer.querySelectorAll(".productImgWrap > .bgImg"), {
-          opacity: 0,
-        });
-        gsap.set(activeContainer.querySelectorAll(".productText > span.on"), {
-          clipPath: "inset(100% 0 0 0)",
-        });
-
-        const tl4 = gsap.timeline({
-          scrollTrigger: {
-            trigger: activeContainer,
-            start: "top top",
-            end: "+=3000",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        });
-
-        oldTrigger = tl4.scrollTrigger;
-
-        tl4
-          .to(
-            activeContainer.querySelectorAll(".productText > span.on"),
-            {
-              opacity: 1,
-              clipPath: "inset(0% 0 0 0)",
-              stagger: 0.5,
-              color: "#111",
-            },
-            "<",
-          )
-          .to(
+        productCtx = gsap.context(() => {
+          gsap.set(
             activeContainer.querySelectorAll(".productImgWrap > .bgImg"),
-            {
-              opacity: 1,
-              stagger: 0.5,
-            },
-            "<0.5",
+            { opacity: 0 },
           );
+          gsap.set(activeContainer.querySelectorAll(".productText > span.on"), {
+            clipPath: "inset(100% 0 0 0)",
+          });
+
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: activeContainer,
+                start: "top top",
+                end: "+=3000",
+                scrub: true,
+                invalidateOnRefresh: true,
+              },
+            })
+            .to(
+              activeContainer.querySelectorAll(".productText > span.on"),
+              {
+                opacity: 1,
+                clipPath: "inset(0% 0 0 0)",
+                stagger: 0.5,
+                color: "#111",
+              },
+              "<",
+            )
+            .to(
+              activeContainer.querySelectorAll(".productImgWrap > .bgImg"),
+              {
+                opacity: 1,
+                stagger: 0.5,
+              },
+              "<0.5",
+            );
+        });
 
         ScrollTrigger.refresh();
       };
     }
 
     if (isMobile) {
-      let oldTrigger = null;
-
       productAni = (targetSection) => {
-        if (oldTrigger) {
-          oldTrigger.kill();
-          oldTrigger = null;
-        }
-
+        if (productCtx) productCtx.revert();
         const activeContainer =
           targetSection.querySelector(".aniContainer.show");
         if (!activeContainer) return;
 
-        const moScroll = gsap.timeline({
-          scrollTrigger: {
-            trigger: activeContainer,
-            start: "top top",
-            end: "+=3000",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
+        productCtx = gsap.context(() => {
+          gsap.set(
+            activeContainer.querySelectorAll(".productImgWrap > .bgImg"),
+            { opacity: 0.5 },
+          );
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: activeContainer,
+                start: "top top",
+                end: "+=3000",
+                scrub: true,
+                invalidateOnRefresh: true,
+              },
+            })
+            .to(activeContainer.querySelectorAll(".productText > span"), {
+              opacity: 0,
+              stagger: { each: 0.2, from: "end" },
+            })
+            .to(activeContainer.querySelector(".productImgWrap .product"), {
+              opacity: 1,
+            });
         });
 
-        oldTrigger = moScroll.scrollTrigger;
-
-        moScroll
-          .to(activeContainer.querySelectorAll(".productText > span"), {
-            opacity: 0,
-            stagger: {
-              each: 0.2,
-              from: "end",
-            },
-          })
-          .to(activeContainer.querySelector(".productImgWrap .product"), {
-            opacity: 1,
-          });
+        ScrollTrigger.refresh();
       };
     }
+
+    const activeSection = document.querySelector(".sectionWrap.show");
+    if (isSectionFinished && activeSection) {
+      productAni(activeSection);
+    }
+
+    return () => {
+      if (productCtx) productCtx.revert();
+    };
   },
 );
 
