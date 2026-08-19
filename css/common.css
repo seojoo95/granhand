@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
   width: 90%;
   max-width: 100%;
   transform: translate(-50%, -50%);
-  font-size: clamp(18px, 1rem, 28px);
+  font-size: 28px;
   text-align: center;
   line-height: 2;
 }
@@ -198,19 +198,18 @@ body::-webkit-scrollbar {
   height: auto;
   top: 45%;
   left: 15%;
-  font-size: clamp(14px, 1.2rem, 22px);
+  font-size: 22px;
   line-height: 1.5;
 }
 .sectionContWrap.text .contName {
   margin-bottom: 34px;
   font-weight: 800;
-  font-size: clamp(18px, 1.25rem, 30px);
+  font-size: 28px;
   line-height: 1;
 }
 .sectionContWrap.text .contName > span {
   padding-left: 8px;
   font-weight: normal;
-  font-size: clamp(14px, 1.2rem, 22px);
 }
 
 /* 애니메이션 영역 */
@@ -516,6 +515,7 @@ body::-webkit-scrollbar {
   .scrollWrap {
     width: 50px;
     height: 50px;
+    bottom: 50px;
   }
   .tabMenuContainer {
     position: fixed;
@@ -529,12 +529,15 @@ body::-webkit-scrollbar {
   }
   .intro .introText {
     width: 92%;
+    font-size: 18px;
+    letter-spacing: -0.7px;
   }
-  .intro .introText {
-    letter-spacing: -0.5px;
+  .sectionContWrap.text {
+    font-size: 16px;
   }
   .sectionContWrap.text .contName {
     margin-bottom: 28px;
+    font-size: 22px;
   }
 
   /* aniSectionWrap 요소 */
@@ -765,14 +768,19 @@ body::-webkit-scrollbar {
 /* 모바일 */
 @media screen and (max-width: 759px) {
   .intro .introText {
-    letter-spacing: -0.7px;
+    font-size: 12px;
   }
   .scrollWrap {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
+    bottom: 50px;
   }
   .sectionContWrap.text {
-    left: 30px;
+    left: 50px;
+    font-size: 12px;
+  }
+  .sectionContWrap.text .contName {
+    font-size: 16px;
   }
   .aniSectionWrap {
     height: 600%;
