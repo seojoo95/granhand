@@ -51,7 +51,8 @@ body::-webkit-scrollbar {
   width: 90%;
   max-width: 100%;
   transform: translate(-50%, -50%);
-  font-size: 28px;
+  font-size: 22px;
+  font-weight: lighter;
   text-align: center;
   line-height: 2;
 }
@@ -144,6 +145,7 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 0% 100%;
+  font-family: "suit", "Arial";
 }
 
 .headerContainer .mainMenu:hover,
@@ -198,13 +200,14 @@ body::-webkit-scrollbar {
   height: auto;
   top: 45%;
   left: 15%;
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: lighter;
   line-height: 1.5;
 }
 .sectionContWrap.text .contName {
   margin-bottom: 34px;
   font-weight: 800;
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1;
 }
 .sectionContWrap.text .contName > span {
