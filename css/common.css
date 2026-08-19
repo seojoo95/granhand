@@ -420,11 +420,11 @@ body::-webkit-scrollbar {
 }
 
 .aniSectionWrap .productInfoWrap {
-  width: 35%;
+  width: 100%;
   height: 100%;
   position: fixed;
   top: 60px;
-  left: 150px;
+  left: 10%;
 }
 .aniSectionWrap .productTextWrap {
   position: absolute;
@@ -906,7 +906,7 @@ body::-webkit-scrollbar {
 }
 
 /* 가로형 */
-@media (orientation: landscape) and (max-width: 1599px) {
+@media (pointer: coarse) and (orientation: landscape) {
   .intro,
   .mainWrap {
     display: none;

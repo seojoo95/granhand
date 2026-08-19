@@ -267,6 +267,7 @@ mm.add(
       };
     }
 
+    //resize 될 경우
     const activeSection = document.querySelector(".sectionWrap.show");
     if (isSectionFinished && activeSection) {
       productAni(activeSection);
