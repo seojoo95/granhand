@@ -77,6 +77,12 @@ body::-webkit-scrollbar {
 .scroll:last-of-type {
   bottom: 0;
 }
+.mainText,
+.subText p,
+.scroll {
+  opacity: 0;
+}
+
 .headerContainer {
   position: fixed;
   top: 0;

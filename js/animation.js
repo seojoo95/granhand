@@ -5,7 +5,7 @@ const wrap = document.querySelector(".mainWrap");
 const header = document.querySelector(".headerContainer");
 const modal = document.querySelector(".modalWrap");
 
-gsap.set(".mainText, .subText p, .scroll", { opacity: 0 });
+// gsap.set(".mainText, .subText p, .scroll", { opacity: 0 });
 gsap.set(".introLogo", { clipPath: "inset(0 100% 0 0)" });
 
 function introScroll() {
