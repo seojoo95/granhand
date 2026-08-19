@@ -41,6 +41,7 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   width: 60%;
   max-width: 450px;
+  z-index: 999;
 }
 .intro .logoWrap > img {
   width: 100%;
