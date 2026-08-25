@@ -3,34 +3,34 @@
   font-weight: 300;
   src:
     local("SUIT-Regular"),
-    url(../../fonts/SUIT-Regular.otf) format("otf"),
-    url(../../fonts/SUIT-Regular.ttf) format("ttf"),
-    url(../../fonts/SUIT-Regular.woff2) format("woff2");
+    url(../../fonts/SUIT-Regular.woff2) format("woff2"),
+    url(../../fonts/SUIT-Regular.ttf) format("truetype"),
+    url(../../fonts/SUIT-Regular.otf) format("opentype");
 }
 @font-face {
   font-family: "suit";
   font-weight: 500;
   src:
     local("SUIT-Medium"),
-    url(../../fonts/SUIT-Medium.otf) format("otf"),
-    url(../../fonts/SUIT-Medium.ttf) format("ttf"),
-    url(../../fonts/SUIT-Medium.woff2) format("woff2");
+    url(../../fonts/SUIT-Medium.woff2) format("woff2"),
+    url(../../fonts/SUIT-Medium.ttf) format("truetype"),
+    url(../../fonts/SUIT-Medium.otf) format("opentype");
 }
 @font-face {
   font-family: "suit";
   font-weight: 600;
   src:
     local("SUIT-Bold"),
-    url(../../fonts/SUIT-Bold.otf) format("otf"),
-    url(../../fonts/SUIT-Bold.ttf) format("ttf"),
-    url(../../fonts/SUIT-Bold.woff2) format("woff2");
+    url(../../fonts/SUIT-Bold.woff2) format("woff2"),
+    url(../../fonts/SUIT-Bold.ttf) format("truetype"),
+    url(../../fonts/SUIT-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: "suit";
   font-weight: 700;
   src:
     local("SUIT-ExtraBold"),
-    url(../../fonts/SUIT-ExtraBold.otf) format("otf"),
-    url(../../fonts/SUIT-ExtraBold.ttf) format("ttf"),
-    url(../../fonts/SUIT-ExtraBold.woff2) format("woff2");
+    url(../../fonts/SUIT-ExtraBold.woff2) format("woff2"),
+    url(../../fonts/SUIT-ExtraBold.ttf) format("truetype"),
+    url(../../fonts/SUIT-ExtraBold.otf) format("opentype");
 }
